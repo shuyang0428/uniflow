@@ -7,7 +7,9 @@ class TestExpandOp(unittest.TestCase):
     def setUp(self):
         # Set up a test node and ExpandOp instance before the test starts
         # Add a name argument to the Node instance
-        self.test_node = Node(name="test_node", value_dict={"1": "2", "3": "4", "5": "6", "7": "8"})
+        self.test_node = Node(
+            name="test_node", value_dict={"1": "2", "3": "4", "5": "6", "7": "8"}
+        )
         self.expand_op = ExpandOp(name="test_expand")
 
     def test_expand_op(self):

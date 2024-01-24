@@ -3,8 +3,11 @@ from typing import Dict, Callable, Tuple
 from uniflow.node import Node
 from uniflow.op.op import Op
 
+
 class ExpandOp(Op):
-    def __init__(self, name: str, split_func: Callable[[Dict], Tuple[Dict, Dict]] = None):
+    def __init__(
+        self, name: str, split_func: Callable[[Dict], Tuple[Dict, Dict]] = None
+    ):
         """Constructor of ExpandOp class for uniflow.
 
         Args:
