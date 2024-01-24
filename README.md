@@ -302,3 +302,26 @@ If you are on EC2, you can launch a GPU instance with the following config:
     <img src="example/image/readme_ec2_ami.jpg" alt="Alt text" width="50%" height="50%"/>
 - EBS: at least 100G
     <img src="example/image/readme_ec2_storage.png" alt="Alt text" width="50%" height="50%"/>
+
+### Docker Dev Setup
+
+```
+1.Build the Docker Image:
+docker build -t uniflow-app .
+2.Run the Docker Container:
+docker run -p 4000:80 uniflow-app
+```
+
+### k8s Dev Setup
+
+```
+1.Save the YAML file with all necessary resources.
+2.Use kubectl to apply the configuration to your cluster:
+kubectl apply -f uniflow-deployment.yaml
+3.Check the status of your deployment:
+kubectl get deployments
+kubectl get pods
+4.Once the deployment is up and running, find the LoadBalancer service endpoint:
+kubectl get services
+```
+

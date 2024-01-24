@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uniflow-deployment
+  labels:
+    app: uniflow
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: uniflow
+  template:
+    metadata:
+      labels:
+        app: uniflow
+    spec:
+      containers:
+      - name: uniflow
+        image: uniflow-app:latest
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: uniflow-service
+spec:
+  selector:
+    app: uniflow
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: LoadBalancer
