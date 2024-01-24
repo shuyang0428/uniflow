@@ -38,7 +38,7 @@ class ExpandReduceFlow(Flow):
         reduce_node = self.reduce_op(expand_1, expand_2)
 
         # After the flow operations, store the results in the database
-        db_path = 'uniflow.db'
+        db_path = "uniflow.db"
         init_db(db_path)  # Ensure the database is initialized
 
         # Assuming the reduce_node contains the final key-value pairs as a dictionary in reduce_node.value_dict

@@ -11,7 +11,4 @@ RATER = "rater"
 
 EXPAND_REDUCE = "expand_reduce"
 
-flow_dict = {
-    EXPAND_REDUCE: ExpandReduceFlow
-}
-
+flow_dict = {EXPAND_REDUCE: ExpandReduceFlow}

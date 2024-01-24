@@ -2,6 +2,7 @@ from uniflow.node import Node
 from typing import Dict, Callable
 from uniflow.op.op import Op
 
+
 class ReduceOp(Op):
     def __init__(self, name: str, merge_func: Callable[[Dict, Dict], Dict] = None):
         """Constructor of ReduceOp class for uniflow.

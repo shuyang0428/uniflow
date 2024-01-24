@@ -25,8 +25,10 @@ class ExpandOp(Op):
         """
         n = len(value_dict)
         keys = list(value_dict.keys())
-        return ({k: value_dict[k] for k in keys[:n // 2]},
-                {k: value_dict[k] for k in keys[n // 2:]})
+        return (
+            {k: value_dict[k] for k in keys[: n // 2]},
+            {k: value_dict[k] for k in keys[n // 2 :]},
+        )
 
     def __call__(self, root: Node) -> (Node, Node):
         """Call op to split the root node into two nodes.
